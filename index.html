@@ -48,6 +48,26 @@
     .accent {
       color: #D4813A;
     }
+
+    .confirmed {
+      display: none;
+    }
+
+    .confirmed.show {
+      display: block;
+    }
+
+    .default.hide {
+      display: none;
+    }
+
+    .check {
+      color: #D4813A;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
   </style>
 </head>
 <body>
@@ -59,7 +79,22 @@
     <path d="M740.526,444.316 C639.59,444.316 552.182,501.941 509.281,586.033 C604.32,653.097 666.394,763.7 666.394,888.799 C666.394,909.827 664.615,930.431 661.239,950.503 C686.235,958.51 712.866,962.877 740.526,962.877 C883.83,962.877 1000,846.792 1000,703.6 C1000,560.4 883.83,444.316 740.526,444.316" fill="#D4813A"/>
   </svg>
 
-  <h1>We're rebuilding <span class="accent">everything.</span></h1>
-  <p>Digital DJ Pool — something new is coming.</p>
+  <div class="default">
+    <h1>We're rebuilding <span class="accent">everything.</span></h1>
+    <p>Digital DJ Pool — something new is coming.</p>
+  </div>
+
+  <div class="confirmed">
+    <div class="check">&#10003;</div>
+    <h1>You're on the <span class="accent">list.</span></h1>
+    <p>We'll reach out when the new Digital DJ Pool is ready.</p>
+  </div>
+
+  <script>
+    if (new URLSearchParams(window.location.search).has('src')) {
+      document.querySelector('.default').classList.add('hide');
+      document.querySelector('.confirmed').classList.add('show');
+    }
+  </script>
 </body>
 </html>
