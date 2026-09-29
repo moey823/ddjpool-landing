@@ -1,0 +1,21 @@
+{
+  "treatment": "approved-a",
+  "lockups": {
+    "lockup-nav-dark": {
+      "width": 90.564692,
+      "height": 28
+    },
+    "lockup-nav-light": {
+      "width": 90.564692,
+      "height": 28
+    },
+    "lockup-masthead-dark": {
+      "width": 134.847038,
+      "height": 42
+    },
+    "lockup-masthead-light": {
+      "width": 134.847038,
+      "height": 42
+    }
+  }
+}
